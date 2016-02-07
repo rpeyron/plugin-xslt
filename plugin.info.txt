@@ -1,0 +1,7 @@
+base   xslt
+author Remi Peyronnet
+email  remi+xslt@via.ecp.fr
+date   2016-02-07
+name   xslt Plugin
+desc   Add XSL Transform syntax
+url    https://www.dokuwiki.org/plugin:xslt
