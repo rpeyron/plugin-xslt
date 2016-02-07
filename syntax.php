@@ -32,7 +32,7 @@ class syntax_plugin_xslt extends DokuWiki_Syntax_Plugin {
     function getSort() { return 1242; }
     function connectTo($mode) { $this->Lexer->addSpecialPattern('&&XML&&\n.*\n&&XSLT&&\n.*\n&&END&&',$mode,'plugin_xslt'); }
 
-    function handle($match, $state, $pos, &$handler)
+    function handle($match, $state, $pos, Doku_Handler $handler)
     { 
         switch ($state) {
           case DOKU_LEXER_SPECIAL :
@@ -64,7 +64,7 @@ class syntax_plugin_xslt extends DokuWiki_Syntax_Plugin {
         return array();
     }
     
-    function render($mode, &$renderer, $data) 
+    function render($mode, Doku_Renderer $renderer, $data) 
     {
          if($mode == 'xhtml'){
             list($state, $match) = $data;
